@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_dilog_input"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="回答问题"
+            android:textColor="#000"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                android:gravity="top"
+                android:hint="“温馨提示”：您的咨询应当仅限于具体法律问题而不能涉及政治或者体制，如涉及他人或者单位名称请用大写字母代替如（A公司、A某等）。律师的解答系自愿的公益服务行为，不是律师的法定职责和义务，其解答仅供你个人参考，司法行政机关或者律师对此不承担任何责任。"
+                android:minLines="12"
+                android:padding="3dp"
+                android:textColor="#000"
+                android:textSize="13sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"></LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_cancel"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_bg_lawyer_commonly_cancel"
+                        android:text="取消"
+                        android:textColor="#fff" />
+
+                    <Button
+                        android:id="@+id/btn_determine"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_btn_bg_lawyer_commonly_submit"
+                        android:text="确定"
+                        android:textColor="#fff" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

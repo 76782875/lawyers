@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_bg_input_view"
+    android:orientation="vertical"
+    android:paddingBottom="1dp"
+    android:paddingLeft="20dp"
+    android:paddingTop="1dp">
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:hint="909090"
+        android:textColor="#000"
+        android:textColorHint="#cacbce" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#cacbce" />
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#fff"
+        android:hint="9090909"
+        android:inputType="textPassword"
+        android:textColor="#000"
+        android:textColorHint="#cacbce" />
+</LinearLayout>

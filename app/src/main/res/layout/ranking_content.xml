@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#000">
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="解答排行"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_bg_btn_personal_save"
+            android:padding="12dp"
+            android:src="@drawable/icon_back" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:id="@+id/tv_select_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selecter_ranking"
+                android:padding="5dp"
+                android:text="总排行榜"
+                android:textColor="#fff" />
+
+            <TextView
+                android:id="@+id/tv_frim_select_ranking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selecter_ranking"
+                android:padding="5dp"
+                android:text="总排行榜"
+                android:textColor="#fff"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></android.support.v4.view.ViewPager>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="26dp"
+        android:orientation="horizontal"
+        android:paddingTop="3dp">
+
+
+        <ImageView
+            android:id="@+id/iv_lawyer"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/selector_btn_bg_lawyer" />
+
+        <ImageView
+            android:id="@+id/iv_firm"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:src="@drawable/selector_btn_bg_firm" />
+
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/rg_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <RadioButton
+            android:id="@+id/btn_lawyer"
+            style="@style/home_button_style"
+            android:checked="true"
+            android:text="@string/home_but3"
+            android:textSize="12sp" />
+
+        <RadioButton
+            android:id="@+id/btn_firm"
+            style="@style/home_button_style"
+            android:text="@string/home_but2"
+            android:textSize="12sp" />
+    </RadioGroup>
+</LinearLayout>

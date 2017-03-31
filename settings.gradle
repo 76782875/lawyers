@@ -1,0 +1,2 @@
+include ':app', ':viewPagerIndicator_Library', ':PushSDK', ':lib-bither-compress'
+include ':xUtilsLibrary'

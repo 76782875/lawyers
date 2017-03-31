@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/shape_bg_btn_lawyer_personal_bind_telyphone" android:state_pressed="false" />
+    <item android:drawable="@drawable/shape_bg_btn_lawyer_personal_bind_telyphone_pass" android:state_pressed="true" />
+    <item android:drawable="@color/itemAnswerProblemText2" android:state_enabled="false" />
+</selector>

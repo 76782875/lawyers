@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ucap.lawyers">
+
+    <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <!-- 用于申请调用A-GPS模块 -->
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 地图包、搜索包需要的基础权限 -->
+    <!-- 允许程序打开网络套接字 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 允许程序设置内置sd卡的写权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 允许程序获取网络状态 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 允许程序访问WiFi网络信息 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 允许程序读写手机状态和身份 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 允许程序访问CellID或WiFi热点来获取粗略的位置 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:configChanges="orientation|keyboardHidden"
+        android:icon="@drawable/icon_help"
+        android:label="@string/app_name"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+
+        <!-- 高德地图key -->
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="e2dc76461ef5f0f25b8a39d70cef7ca1" />
+        <!-- 友盟统计,  友盟推送 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="58216f3975ca351317000592" />
+        <meta-data
+            android:name="UMENG_MESSAGE_SECRET"
+            android:value="66a0eebc0a74191a336e9e0ae030de5a" />
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="Lawyers" />
+
+        <activity
+            android:name=".activitys.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.PageIndicatorDefaults">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activitys.publicActivity.FirmDetailedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.LawyerDetailedActivity"
+            android:screenOrientation="portrait" />
+        <!-- 腾讯服务 -->
+        <activity
+            android:name=".activitys.userLogin.UserOrdinaryActivity"
+            android:screenOrientation="portrait">
+            <data android:scheme="1105754205" />
+        </activity>
+        <activity
+            android:name=".activitys.userLogin.UserLawyerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.UserExecutiveDirectorActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.UserAdminActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryPersonalCenterActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.BackPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.CollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.SignActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryMessageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryAboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerPersonalActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerBindTelephoneActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.SetNewPasswordActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerMessageNoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerPublicConsultActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerBusinessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerCaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerCommonlyDetailedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerAnswerProblemActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.userLogin.userLawyeActivitys.LawyerMyAnswerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.ConsultationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.LawsRegulationsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.publicActivity.PublicLawyerDetailedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.LocationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activitys.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activitys.publicActivity.ImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <!-- qq登陆 -->
+        <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="1105754205" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".activitys.userLogin.userLawyeActivitys.PDFActivity" />
+        <!-- 高德地图定位服务 -->
+        <service android:name="com.amap.api.location.APSService" />
+
+        <activity android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryProblemDetailedActivity" />
+        <activity android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryMassageDetailedActivity" />
+        <activity android:name=".activitys.userLogin.userOrdinaryActivitys.OrdinaryNewUserActivity" />
+        <!-- 微信登陆 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:exported="true" />
+
+        <receiver
+            android:name=".wxapi.AppRegister"
+            android:permission="com.tencent.mm.plugin.permission.SEND">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".activitys.publicActivity.RankingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activitys.publicActivity.ranking.RankingLawyersDetailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activitys.publicActivity.ranking.RankingAnswerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ucap.lawyers.activitys.publicActivity.answer.AnswerLawyersDetailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.ucap.lawyers.activitys.publicActivity.answer.AnswerListActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service android:name=".service.NewMassageService" />
+
+        <activity
+            android:name=".activitys.publicActivity.LawCanonActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name=".activitys.publicActivity.lawCanon.LawCanonDetailedActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name=".activitys.userLogin.userLawyeActivitys.LawUploadActivity" />
+        <activity android:name=".activitys.publicActivity.lawCanon.LwaFindActivity"></activity>
+    </application>
+
+</manifest>

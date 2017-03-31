@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_root_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_camera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_dialog_photo_item1"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="拍照"
+                android:textColor="#015ffe"
+                android:textSize="10pt" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="#aaa" />
+
+            <TextView
+                android:id="@+id/tv_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_dialog_photo_item2"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="从手机选取"
+                android:textColor="#015ffe"
+                android:textSize="10pt" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_dismiss"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TextView
+                android:id="@+id/tv_dismiss"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_dialog_photo_item3"
+                android:gravity="center"
+                android:padding="15dp"
+                android:text="取消"
+                android:textColor="#015ffe"
+                android:textSize="10pt" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

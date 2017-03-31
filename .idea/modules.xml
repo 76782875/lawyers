@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/PushSDK/PushSDK.iml" filepath="$PROJECT_DIR$/PushSDK/PushSDK.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lawyers.iml" filepath="$PROJECT_DIR$/lawyers.iml" />
+      <module fileurl="file://$PROJECT_DIR$/lib-bither-compress/lib-bither-compress.iml" filepath="$PROJECT_DIR$/lib-bither-compress/lib-bither-compress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viewPagerIndicator_Library/viewPagerIndicator_Library.iml" filepath="$PROJECT_DIR$/viewPagerIndicator_Library/viewPagerIndicator_Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xUtilsLibrary/xUtilsLibrary.iml" filepath="$PROJECT_DIR$/xUtilsLibrary/xUtilsLibrary.iml" />
+    </modules>
+  </component>
+</project>

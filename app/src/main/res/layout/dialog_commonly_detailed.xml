@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#175ec9"
+        android:paddingBottom="5dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="案件详细"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_dismiss"
+            android:layout_width="35dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/selector_bg_dialog_delete"
+            android:padding="5dp"
+            android:src="@drawable/dialog_delete" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:id="@+id/pb_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:indeterminateDrawable="@drawable/shape_pb_bg" />
+
+        <TextView
+            android:id="@+id/tv_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="链接超时！"
+            android:textColor="#888"
+            android:visibility="invisible" />
+
+        <LinearLayout
+            android:id="@+id/ll_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--编号／派单时间-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#fff"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="编号:  "
+                        android:textColor="#175ec9" />
+
+                    <TextView
+                        android:id="@+id/tv_order_on"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv1"
+                        android:text="20160518-16-55-22-112-670"
+                        android:textColor="#f00" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/tv2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="派单时间:  "
+                        android:textColor="#175ec9" />
+
+                    <TextView
+                        android:id="@+id/tv_create_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv2"
+                        android:text="2016-05-18  16:55:22"
+                        android:textColor="#f00" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:background="#eee"
+                    android:orientation="vertical">
+                    <!--案件信息-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:background="#fff"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="案件信息"
+                            android:textColor="#000" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_marginTop="10dp"
+                            android:background="#aaa" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="委托方名称"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_casename"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="委托方证号"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_casecode"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="协议标的"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_casenumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="预计收费"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_casecose"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="受理日期"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_optdate"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:text="案件类型"
+                            android:textColor="#777" />
+
+                        <TextView
+                            android:id="@+id/tv_casetype"
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/shape_bg_et_lawyer_commonly_info"
+                            android:gravity="center_vertical"
+                            android:padding="5dp"
+                            android:text="test"
+                            android:textColor="#444" />
+                    </LinearLayout>
+                    <!--承办律师-->
+                    <LinearLayout
+                        android:id="@+id/ll_lawyers"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:background="#eee"
+                        android:orientation="vertical"></LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

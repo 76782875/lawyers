@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEE"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#000">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="律所基本信息"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_user_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_bg_btn_personal_save"
+            android:padding="12dp"
+            android:src="@drawable/icon_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_bg_firm_detailed_item"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/tv_firm_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="律师事务所"
+            android:textColor="#000"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shape_bg_firm_detailed_item"
+            android:orientation="vertical"
+            android:paddingLeft="1dp"
+            android:paddingRight="1dp"
+            android:paddingTop="1dp">
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="6"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="简        介:"
+                    android:textColor="#000" />
+
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:minHeight="160dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="地        址:" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_address"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="5"
+                        android:gravity="center_vertical"
+                        android:paddingTop="3dp"
+                        android:text="四川成都市xxxxx街道"
+                        android:textColor="#000" />
+
+                    <TextView
+                        android:id="@+id/tv_navigation"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2"
+                        android:gravity="center"
+                        android:text="[点击导航]"
+                        android:textColor="@color/text_user_login_textvew" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="许可证号:" />
+
+                <TextView
+                    android:id="@+id/tv_groupnum"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="主管机关:" />
+
+                <TextView
+                    android:id="@+id/tv_groupnaeme"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="负  责  人:" />
+
+                <TextView
+                    android:id="@+id/tv_typesettings"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="phone"
+                    android:textColor="@color/text_user_login_textvew" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="组织形式:" />
+
+                <TextView
+                    android:id="@+id/tv_show_name"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="phone"
+                    android:textColor="#000" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_hhr"
+                style="@style/firm_detailed_format"
+                android:layout_weight="1"
+                android:gravity="center_vertical">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="合  伙  人:" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_hhrlist"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="电        话:" />
+
+                <TextView
+                    android:id="@+id/tv_phone"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="phone" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    style="@style/firm_detailed_text"
+                    android:text="邮        箱:" />
+
+                <TextView
+                    android:id="@+id/tv_email"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="email" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="网        站:" />
+
+                <TextView
+                    android:id="@+id/tv_web_url"
+                    style="@style/firm_detailed_text2"
+                    android:autoLink="web" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="荣誉表彰:" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_ryzs"
+                        style="@style/firm_detailed_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/tv_detailed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[查看详细]"
+                        android:textColor="@color/text_user_login_textvew" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1"
+                android:visibility="gone">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="法律援助:" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        style="@style/firm_detailed_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[查看详细]"
+                        android:textColor="@color/text_user_login_textvew" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="公益服务:" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:orientation="horizontal"
+                    android:paddingRight="10dp">
+
+                    <TextView
+                        android:id="@+id/tv_gyzs"
+                        style="@style/firm_detailed_text2"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="0"
+                        android:text="1" />
+
+                    <TextView
+                        android:id="@+id/tv_gyzs_detailed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[查看详细]"
+                        android:textColor="@color/text_user_login_textvew" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="负面指数:" />
+
+                <TextView
+                    android:id="@+id/tv_fmjf"
+                    style="@style/firm_detailed_text2" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/textView4"
+                    style="@style/firm_detailed_text"
+                    android:text="规范指数:" />
+
+                <TextView
+                    android:id="@+id/tv_gfzs"
+                    style="@style/firm_detailed_text2" />
+            </LinearLayout>
+            <!--年度考核暂时缺数据-->
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+                    style="@style/firm_detailed_text"
+                    android:text="年度考核:" />
+
+                <TextView
+                    android:id="@+id/tv_yaer_assess"
+                    style="@style/firm_detailed_text2" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+
+                <TextView
+
+                    style="@style/firm_detailed_text"
+                    android:text="律师名单:" />
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:gravity="center_vertical"
+                    android:paddingRight="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/ll_lawyers_list"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="horizontal"></LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_show_lawyerlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ll_lawyers_list"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center_vertical"
+                        android:text="[查看更多]"
+                        android:textColor="@color/text_user_login_textvew" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/firm_detailed_format"
+                android:layout_weight="1">
+                <!--<TextView-->
+                <!--android:id="@+id/textView3"-->
+                <!--style="@style/firm_detailed_text"-->
+                <!--android:background="#fff"-->
+                <!--android:text="声        明:" />-->
+                <TextView
+                    style="@style/firm_detailed_text2"
+                    android:padding="10dp"
+                    android:text="声明：律所简介由律师事务所提供，不作为对律师事务所进行宣传评价使用。" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/selector_bg_item"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="wqeuqwieuiqwueiwqueiwqueiwqueiqweiqwieuqwieuqwiueiwqueiwqueiqwueiwqeuqwieuiqwueiwqueiwqueiwqueiqweiqwieuqwieuqwiueiwqueiwqueiqwuei"
+        android:textColor="#000" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="待回答"
+            android:textColor="#ee5e0a" />
+
+        <TextView
+            android:id="@+id/tv_timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="提问时间:2016-8-30"
+            android:textColor="#888" />
+    </RelativeLayout>
+</LinearLayout>

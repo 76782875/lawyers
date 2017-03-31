@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_213"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="刑事法务"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_214"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="行政法务"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_215"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="经济纠纷"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_216"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="婚姻家庭"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_217"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="金融保险"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_218"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="社保劳资"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_219"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="交通医疗"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:background="#888" />
+
+    <TextView
+        android:id="@+id/tv_220"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/selector_bg_item"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="其他法务"
+        android:textColor="#000"
+        android:textSize="18sp" />
+
+</LinearLayout>

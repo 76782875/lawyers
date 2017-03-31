@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">成都市律师综合信息系统</string>
+    <string name="home_but1">首页</string>
+    <string name="home_but2">律所</string>
+    <string name="home_but3">律师</string>
+    <string name="home_but4">我的</string>
+    <string name="action_settings">Settings</string>
+</resources>

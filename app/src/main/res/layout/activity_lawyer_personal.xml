@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="#000">
+
+        <TextView
+            android:id="@+id/tv_top_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="执业律师"
+            android:textColor="#fff"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/iv_user_back"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_bg_btn_personal_save"
+            android:padding="12dp"
+            android:src="@drawable/icon_back" />
+
+        <TextView
+            android:id="@+id/tv_cancellation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_bg_btn_personal_save"
+            android:padding="10dp"
+            android:text="注销"
+            android:textColor="#fff" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/rl_personal_next"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/selector_bg_ordinary_item"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iv_photo"
+                    android:gravity="center_vertical"
+                    android:text="律师用户个人中心"
+                    android:textColor="#000"
+                    android:textSize="18sp" />
+                <!--android:background="@drawable/selector_bg_btn_lawyer_personal_bind_telephone"-->
+                <Button
+                    android:id="@+id/btn_bind_telephone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="#888"
+                    android:enabled="false"
+                    android:padding="5dp"
+                    android:text="绑定手机号"
+                    android:textColor="@color/text_user_btn_login"
+                    android:visibility="gone" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_photo"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:padding="10dp"
+                    android:src="@drawable/icon_user1" />
+            </RelativeLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="6"
+                    android:orientation="vertical">
+                    <!--签到功能 暂时禁用-->
+                    <RelativeLayout
+                        android:id="@+id/rl_sign"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/selector_bg_ordinary_item"
+                        android:visibility="gone">
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="15dp"
+                            android:gravity="center">
+
+                            <TextView
+                                android:id="@+id/tv_text1"
+                                style="@style/itemTextSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:text="已连续签到"
+                                android:textColor="#999" />
+
+                            <!--android:textColor="#FB6C06"-->
+                            <TextView
+                                android:id="@+id/tv_sign_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@id/tv_text1"
+                                android:gravity="center"
+                                android:text="0"
+                                android:textColor="#999"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                style="@style/itemTextSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_toRightOf="@id/tv_sign_day"
+                                android:gravity="center"
+                                android:text="天"
+                                android:textColor="#999" />
+                        </RelativeLayout>
+                        <!--android:textColor="#2ea548"-->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:text="去签到 >"
+                            android:textColor="#999"
+                            android:textSize="18sp" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_bg_input_view"
+                            android:orientation="vertical"
+                            android:paddingLeft="0dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rl_message"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_1" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin1"
+                                    android:layout_alignStart="@+id/lin1"
+                                    android:layout_centerVertical="true"
+                                    android:text="信息公告"
+                                    android:textColor="#000" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+                            <!--公众咨询暂时禁用-->
+                            <RelativeLayout
+                                android:id="@+id/rl_consult"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_2" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+
+                                <TextView
+                                    android:id="@+id/textView2"
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin2"
+                                    android:layout_alignStart="@+id/lin2"
+                                    android:layout_centerVertical="true"
+                                    android:text="公众咨询"
+                                    android:textColor="#000" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_business"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_3" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin3"
+                                    android:layout_alignStart="@+id/lin3"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的业务"
+                                    android:textColor="#000" />
+
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_case"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_4" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin4"
+                                    android:layout_alignStart="@+id/lin4"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的案件"
+                                    android:textColor="#888" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_answer"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_5" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin5"
+                                    android:layout_alignStart="@+id/lin5"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的回答"
+                                    android:textColor="#000" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin5"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_law_add"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_law_add" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin9"
+                                    android:layout_alignStart="@+id/lin9"
+                                    android:layout_centerVertical="true"
+                                    android:text="法律众筹"
+                                    android:textColor="#888" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin9"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_collection"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp"
+                                android:visibility="gone">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_6" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin6"
+                                    android:layout_alignStart="@+id/lin6"
+                                    android:layout_centerVertical="true"
+                                    android:text="我的收藏"
+                                    android:textColor="#888" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin6"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_basic"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_lawyer_personal_7" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin7"
+                                    android:layout_alignStart="@+id/lin7"
+                                    android:layout_centerVertical="true"
+                                    android:text="电子名片"
+                                    android:textColor="#000" />
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:padding="18dp"
+                                    android:src="@drawable/icon_personal_next" />
+
+                                <View
+                                    android:id="@+id/lin7"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#cacbce" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/rl_code"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/selector_bg_ordinary_item"
+                                android:paddingLeft="15dp">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:layout_centerVertical="true"
+                                    android:src="@drawable/icon_code" />
+
+                                <TextView
+                                    style="@style/itemTextSize"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignLeft="@+id/lin8"
+                                    android:layout_alignStart="@+id/lin8"
+                                    android:layout_centerVertical="true"
+                                    android:text="app二维码分享"
+                                    android:textColor="#000" />
+
+
+                                <View
+                                    android:id="@+id/lin8"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_marginLeft="40dp"
+                                    android:background="#00ffffff" />
+                            </RelativeLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="item1">#c30006</color>
+    <color name="item2">#339f3f</color>
+    <color name="item3">#054a9e</color>
+    <color name="item4">#6d00c3</color>
+    <color name="item5">#33FFFF</color>
+    <color name="itemAnswerProblemText">#0f6fc3</color>
+    <color name="itemAnswerProblemText2">#888</color>
+    <color name="ordinaryProblem_1">#EE5E0A</color>
+    <color name="ordinaryProblem_0">#339f3f</color>
+    <color name="number_1">#f49e0c</color>
+    <color name="number_2">#b5b5cc</color>
+    <color name="number_3">#c7a2a3</color>
+    <color name="number">#444</color>
+    <color name="nice">#aaa</color>
+</resources>
